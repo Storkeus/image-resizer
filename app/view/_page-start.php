@@ -8,5 +8,5 @@
 <html lang='<?=$_SESSION['lang']?>'>
 <?= $this->module('head', ['title' => $isSeoTitle?$data['seoTitle']:'', 'description' => $isSeoDesc?$data['seoDesc']:'','noindex'=>$isNoIndex,'nofollow'=>$isNoFollow]); ?>
 <body>
-<div>
+<div class="main-container">
 <?=$this->module('header');?>

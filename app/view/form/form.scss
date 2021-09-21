@@ -1,0 +1,42 @@
+.form {
+    display: flex;
+    justify-content: stretch;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 26rem;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    &__input-group {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 1rem 0;
+        width: 100%;
+        &--percent-change,
+        &--specify-size {
+            display: none;
+        }
+    }
+    &__input-group-title,
+    &__label {
+        font-weight: 700;
+        margin: 0 0 .7rem;
+    }
+    &__label {
+        &--small {
+            font-weight: 500;
+        }
+    }
+    &__submit {
+        margin-top: 1.5rem;
+        border: none;
+        color: #fff;
+        background-color: darkcyan;
+        padding: 1rem 1.5rem;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        max-width: 100%;
+    }
+}
