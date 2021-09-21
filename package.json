@@ -1,0 +1,41 @@
+{
+    "name": "app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "webpack-build": "webpack --config webpack.config.js",
+        "postbuild": "postcss ./public/css/style.css > ./public/css/style.min.css",
+        "build": "npm run webpack-build"
+    },
+    "author": "Bartosz Łyżwa",
+    "license": "ISC",
+    "dependencies": {
+        "animate.css": "^3.7.0",
+        "aos": "^2.3.4",
+        "dropdown-js": "0.0.1-alpha11",
+        "jquery": "^3.3.1",
+        "jquery.scrollto": "^2.1.2",
+        "lightbox2": "^2.11.0",
+        "normalize.css": "^8.0.1",
+        "slick-carousel": "^1.8.1",
+        "vanilla-modal": "^1.6.5"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.4.5",
+        "@babel/preset-env": "^7.4.5",
+        "babel-loader": "^8.0.6",
+        "base": "^3.0.0",
+        "css-loader": "^1.0.0",
+        "cssnano": "^4.1.0",
+        "extract-text-webpack-plugin": "^4.0.0-beta.0",
+        "node-sass": "^4.9.3",
+        "postcss-cli": "https://registry.npmjs.org/postcss-cli/-/postcss-cli-6.0.0.tgz",
+        "sass-loader": "^7.1.0",
+        "style-loader": "^0.23.0",
+        "url-loader": "^1.1.1",
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.1.0"
+    }
+}

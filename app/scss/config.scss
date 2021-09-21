@@ -1,0 +1,87 @@
+@mixin css-lock($min-size: 1, $max-size: 1.4, $min-width: 20, $max-width: 100, $property: font-size, $unit: rem) {
+    #{$property}: calc(#{$min-size}#{$unit} + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-width}#{$unit}) / (#{$max-width} - #{$min-width})));
+    @media (max-width: #{$min-width}#{$unit}) {
+        #{$property}: #{$min-size}#{$unit};
+    }
+    @media (min-width: #{$max-width}#{$unit}) {
+        #{$property}: #{$max-size}#{$unit};
+    }
+}
+
+@function asVw($valueInPixel) {
+    @return ($valueInPixel/19.2)*1vw;
+}
+
+@function asVh($valueInPixel) {
+    @return ($valueInPixel/10.8)*1vh;
+}
+
+@function asRem($valueInPixel) {
+    @return ($valueInPixel/16)*1rem;
+}
+
+@mixin circle-decoration($positionX:left, $positionY:bottom, $pseudoelement:after) {
+    position: relative;
+    z-index: 20;
+    &::#{$pseudoelement} {
+        position: absolute;
+        width: 61px;
+        height: 61px;
+        #{$positionX}: 0;
+        #{$positionY}: 0;
+        content: '';
+        background: url('/public/images/icons/decoration-circle.svg') no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        z-index: -50;
+        @media(min-width: 1200px) {
+            width: 104px;
+            height: 104px;
+        }
+        @content;
+    }
+}
+
+@mixin triangle($direction,
+$sizeH,
+$sizeV,
+$color) {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    -moz-transform: scale(.9999);
+    @if $direction==top {
+        border-width: 0 $sizeV $sizeH $sizeV;
+        border-color: transparent transparent $color transparent;
+    }
+    @if $direction==bottom {
+        border-width: $sizeV $sizeH 0 $sizeV;
+        border-color: $color transparent transparent transparent;
+    }
+    @if $direction==left {
+        border-width: $sizeV $sizeH $sizeV 0;
+        border-color: transparent $color transparent transparent;
+    }
+    @if $direction==right {
+        border-width: $sizeV 0 $sizeV $sizeH;
+        border-color: transparent transparent transparent $color;
+    }
+    @if $direction==topright {
+        border-width: 0 $sizeH $sizeV 0;
+        border-color: transparent $color transparent transparent;
+    }
+    @if $direction==bottomright {
+        border-width: 0 0 $sizeH $sizeV;
+        border-color: transparent transparent $color transparent;
+    }
+    @if $direction==bottomleft {
+        border-width: $sizeH 0 0 $sizeV;
+        border-color: transparent transparent transparent $color;
+    }
+    @if $direction==topleft {
+        border-width: $sizeH $sizeV 0 0;
+        border-color: $color transparent transparent transparent;
+    }
+}

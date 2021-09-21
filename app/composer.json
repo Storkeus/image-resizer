@@ -1,0 +1,10 @@
+{
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Page\\App\\Controller\\": "controller/",
+            "Page\\App\\Core\\": "core/",
+            "Page\\App\\Model\\": "model/"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@import 'reset';
+@import 'config';
+:root,
+html {
+    font-family: sans-serif;
+    font-size: 0.625em;
+    max-width: 192rem;
+    margin: 0 auto;
+}
+
+body {
+    @media(min-width: asRem(992)) {
+        height: 100vh;
+    }
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
