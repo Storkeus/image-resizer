@@ -13,7 +13,7 @@
     flex-direction: column;
     margin: 1rem 0;
     width: 100%; }
-    .form__input-group--percent-change, .form__input-group--specify-size {
+    .form__input-group--hidden {
       display: none; }
   .form__input-group-title, .form__label {
     font-weight: 700;
@@ -30,6 +30,22 @@
     text-transform: uppercase;
     font-weight: 700;
     max-width: 100%; }
+.header__title {
+  font-size: 6rem;
+  text-align: center;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .5rem; }
+  @media (max-width: 37.5rem) {
+    .header__title {
+      font-size: 4.5rem; } }
+  @media (max-width: 31.25rem) {
+    .header__title {
+      font-size: 3.5rem; } }
+  @media (max-width: 23.75rem) {
+    .header__title {
+      font-size: 2.8rem; } }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)

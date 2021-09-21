@@ -32,7 +32,7 @@ class  Sys
     {
 
         header("HTTP/1.0 404 Not Found");
-        header("Location: " . Sys::$base . $_SESSION['lang'] . "/error/404");
+        header("Location: " . Sys::$base . "/error/404");
         exit();
     }
 

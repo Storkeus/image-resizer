@@ -5,7 +5,7 @@
     $isSeoDesc=isset($data['seoDesc'])&&!empty($data['seoDesc']);
 ?>
 <!DOCTYPE html>
-<html lang='<?=$_SESSION['lang']?>'>
+<html lang='en'>
 <?= $this->module('head', ['title' => $isSeoTitle?$data['seoTitle']:'', 'description' => $isSeoDesc?$data['seoDesc']:'','noindex'=>$isNoIndex,'nofollow'=>$isNoFollow]); ?>
 <body>
 <div class="main-container">
