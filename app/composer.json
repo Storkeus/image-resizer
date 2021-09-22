@@ -1,5 +1,7 @@
 {
-    "require": {},
+    "require": {
+        "gumlet/php-image-resize": "1.9.*"
+    },
     "autoload": {
         "psr-4": {
             "Page\\App\\Controller\\": "controller/",
